@@ -74,7 +74,7 @@ with open(filein, "r") as stream:
         line = line + " |\n"
         filewrite.write(line)
     filewrite.write("\n")
-    """
+
     #QUALIFICATION
     filewrite.write(return_md_title2("Qualification"))
     header = return_md_table_header({"Requirement": "centered", "Req #": "centered", "Standard": "centered", "Level": "centered", "Method": "centered", "SOF": "centered", "Compliant?": "centered", "Deviation": "centered"})
@@ -103,7 +103,7 @@ with open(filein, "r") as stream:
                 string = string + " | " + str(i)
             filewrite.write(string + " |\n")
         filewrite.write("\n")
-    """
+
     #PERFORMANCE
     filewrite.write(return_md_title2("Performance"))
     header = return_md_table_header(
