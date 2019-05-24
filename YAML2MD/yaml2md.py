@@ -94,7 +94,7 @@ with open(filein, "r") as stream:
         {"Octave": "centered", "Inlet": "centered", "Outlet": "centered", "Radiated": "centered"})
     for noiserecords in data["Noise"]["Noise Records"]:
         filewrite.write("### Speed : " + str(noiserecords["Speed"]) + "\n\n")
-        filewrite.write("Data are in " + str(noiserecords["Noise Type"]) + " - " + str(noiserecords["Noise Unit"]) + "\n")
+        filewrite.write("Data are in " + str(noiserecords["Noise Type"]) + " - " + str(noiserecords["Noise Unit"]) + "\n\n")
         filewrite.write(header[0])
         filewrite.write(header[1])
         for k,v in noiserecords["Octave"].items():
