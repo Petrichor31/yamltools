@@ -38,9 +38,9 @@ def return_md_table_header(dict):
         Convert a dictionnary {"Spam": "centered", "Bacon": "left-aligned", "Egg": "right-aligned"}
         into tuple. First item is the header titles, second item is for formmating (centered, left-aligned, right-aligned).
         Both are formatted for a markdown table.
-        :param dict:
+        :param dict: dictionnary with the header title and the alignment (centered, left-aligned or right-aligned)
         :type dict: dictionnary
-        :return:
+        :return: header of a table in markdown format
         :rtype: list of strings
 
         :Example:
