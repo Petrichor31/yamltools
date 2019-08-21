@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
+# coding: utf-8
 
 __author__="Yannick BADIE"
-__date__ ="$19 Septembre 2018$"
-__version__ = "$Revision: 1.1$"
+__date__ ="$21 Septembre 2019$"
+__version__ = "$Revision: 1.2$"
 __name__ = "Fan YAML Export to Markdown"
 
 # Standard Library
 from tkinter import filedialog, Tk
-from os import path
-from pathlib import Path
+from pathlib import Path, PurePath
 
 # External Library
 from yaml import load, FullLoader
@@ -22,11 +21,11 @@ global fileout
 
 
 root = Tk()
-root.filename =  filedialog.askopenfilename(title = "Select file",filetypes = (("YAML files","*.yaml"),("all files","*.*")))
+root.filename = filedialog.askopenfilename(title="Select file", filetypes=(("YAML files", "*.yaml"), ("all files", "*.*")))
 # TODO: if no file or cancel ==> stop program properly
 filein = root.filename
-directory = path.split(filein)[0]
-fileout = path.splitext(filein)[0] + ".md"
+directory = PurePath(root.filename).parent
+fileout = Path(root.filename).with_suffix(".md")
 
 # filein = "70778A020001.yaml"
 # fileout = "7070778A020001.md"
